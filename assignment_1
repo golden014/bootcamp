@@ -1,0 +1,46 @@
+Klub basket SMA X baru saja memenangkan kejuaraan daerah, karena itu di tahun ini jumlah murid yang ingin mendaftar meroket pesat. 
+Namun karena keterbatasan kuota, manajer klub akan menyeleksi para pendaftar. Tahap pertama penyeleksian adalah seleksi berdasarkan tinggi badan. 
+Untuk lolos tahap pertama para pendaftar wajib memiliki tinggi badan minimal 156 cm. 
+Total pendaftar berjumlahkan 32 murid, dan belum memiliki catatan tinggi badan sama sekali. 
+berikut cara-cara yang dapat digunakan sang manajer untuk melaksanakan seleksi:
+
+1. linear search method O(n) --> O(32)
+ -pseudocode-
+ 
+ Sort all the participants by their height (ascending order)
+ Create a new line named "pass"
+ Measure the participants' height one by one from left to right
+ If participant's height is greater than 155cm
+     Add participant to "pass"
+ Quit
+             
+2. binary search method O(log n) --> O(log 32) = O(5)
+ -pseudocode-
+ 
+ Sort all the participants by their height (ascending order)
+ Create a new line named "pass"
+ Choose a participant in the middle of the line
+ Measure the participant's height
+ If participant's height less than 156cm
+     Eliminate the participant and all the people on their left side
+     Go back to line 3 (22)
+ Else if participants's height greater than 155 cm
+     Move the participant and all the people on their right side to "pass"
+     Go back to line 3 (22)
+ Else 
+     Quit
+ 
+ //this pseudocode is ignoring the fact that there might be no one in the middle of the line (the line is even)
+     
+     
+     
+     
+     
+         
+ 
+   
+ 												
+   
+ 
+
+
